@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oleo Script Swash Caps';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffe4b5;
+}
+
+.text-container {
+    width: 90%;
+    max-width: 600px;
+    font-size: 4vw;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.line-1 {
+    color: blue;
+    font-size: 50px;
+}
+
+.line-2 {
+    color: #FF9933;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.saffron,
+.white,
+.green {
+    width: 100%;
+}
+
+.saffron {
+    height: 20vw;
+    max-height: 133px;
+    background-color: #FF9933;
+}
+
+.white {
+    height: 20vw;
+    max-height: 134px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green {
+    height: 20vw;
+    max-height: 133px;
+    background-color: green;
+}
+
+.ashok-chakra {
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    max-width: 124px;
+    max-height: 124px;
+    border-radius: 50%;
+    border: 5px solid blue;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ashok-chakra .spikes,
+.ashok-chakra .spikes .spike {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ashok-chakra .spikes .spike {
+    transform: rotate(calc(15deg * var(--i)));
+}
+
+.ashok-chakra .spikes .spike::before {
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 8%;
+    background: blue;
+    border-radius: 50%;
+    top: -5%;
+    left: calc(50% - 4%);
+}
+
+.ashok-chakra .spikes .spike::after {
+    content: "";
+    position: absolute;
+    width: 4%;
+    height: 50%;
+    background: blue;
+    top: -8%;
+    left: calc(50% - 2%);
+    transform-origin: bottom;
+    transform: rotate(7.5deg);
+    clip-path: polygon(50% 5%, 100% 50%, 50% 95%, 0% 50%);
+}
+
+.ashok-chakra::after {
+    content: "";
+    position: absolute;
+    width: 13%;
+    height: 13%;
+    background: blue;
+    top: calc(50% - 6.5%);
+    left: calc(50% - 6.5%);
+    border-radius: 50%;
+}
+
+.text-content {
+    text-align: center;
+    font-size: 10vw;
+}
+
+.text1 {
+    color: #FF9933;
+}
+
+.text2 {
+    color: green;
+}
+
+.year {
+    color: blue;
+    font-size: 8vw;
+}
+
+.celebrate-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #FF9933;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    animation: firework 1s ease-out infinite;
+    display: none;
+}
+
+@keyframes firework {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .text-container {
+        font-size: 28px;
+    }
+
+    .text-content {
+        font-size: 48px;
+    }
+
+    .year {
+        font-size: 40px;
+    }
+
+    .celebrate-btn {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .text-container {
+        font-size: 32px;
+    }
+
+    .text-content {
+        font-size: 62px;
+    }
+
+    .year {
+        font-size: 48px;
+    }
+
+    .celebrate-btn {
+        font-size: 22px;
+    }
+}
+
